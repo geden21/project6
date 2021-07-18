@@ -1,0 +1,8 @@
+POST /api/auth/signup
+POST /api/auth/login
+GET /api/sauces
+GET /api/sauces/:id
+POST /api/sauces
+PUT /api/sauces/:id
+DELETE /api/sauces/:id
+POST /api/sauces/:id/like
