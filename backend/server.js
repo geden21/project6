@@ -46,10 +46,3 @@ server.on('listening', () => {
 
 server.listen(port);
 
-//A quick run-through of what is going on here:
-//
-//the  normalizePort  function returns a valid port, whether it is provided as a number or a string
-//the errorHandler function checks for various errors and handles them appropriately — it is then registered to the server
-//a "listening" event listener is also registered, logging the port or named pipe on which the server is running to the console
-//Our Node development server is now up and running properly, and our Express app is ready to have some proper functionality added to it.
-// https://openclassrooms.com/en/courses/5614116-go-full-stack-with-node-js-express-and-mongodb/5656196-create-an-express-app

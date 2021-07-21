@@ -32,18 +32,21 @@ exports.signup = (req, res, next) => {
 exports.login = (req, res, next) => {
     User.findOne({ email: req.body.email }).then(
         (user) => {
-            if (!user) {
+            if (!user) { // not found 
                 return res.status(401).json({
                     error: new Error('User not found!')
                 });
             }
+
             bcrypt.compare(req.body.password, user.password).then(
                 (valid) => {
-                    if (!valid) {
+                    if (!valid) { // pass is not correct
                         return res.status(401).json({
                             error: new Error('Incorrect password!')
                         });
                     }
+                    // user 
+                    
                     const token = jwt.sign(
                         { userId: user._id },
                         'RANDOM_TOKEN_SECRET',
